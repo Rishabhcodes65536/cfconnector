@@ -1,0 +1,34 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<div class="container">
+    <div class="row mt-5">
+<h1>Registration page</h1>
+<hr>
+<form method="post">
+    <%if(locals.error){ %>
+        <div class="red" style="color:red;text-align:center;">
+            <%=error%>
+        </div>
+    <%}%>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" required name="email">
+    </div>
+    <div class="mb-3">
+      <label for="cf_username" class="form-label">cfusername</label>
+      <input type="text" class="form-control" id="cf_username" required name="cf_username">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>  
+</div>
